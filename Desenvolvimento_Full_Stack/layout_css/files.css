@@ -7,7 +7,8 @@
     0% {background-color: blue;}
     25% {background-color: blueviolet;}
     50% {background-color: yellowgreen;}
-    100% {background-color: pink;}
+    75% {background-color: pink;}
+    100% {background-color: blue;}
 }
 
 #div1{
