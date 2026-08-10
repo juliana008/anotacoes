@@ -16,7 +16,8 @@
     background-color: green;
     float: left;
     animation-name: Engenharia;
-    animation-duration: 4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 
@@ -26,10 +27,11 @@
     background-color: red;
     float: left;
     animation-name: senai;
-    animation-duration: 3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-div1:hover{
+#div1:hover{
     border-radius: 20px;
     background-color: white;
 }
