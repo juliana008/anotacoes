@@ -1,0 +1,36 @@
+@keyframes senai{ /*animação*/
+    from{background-color: red;}
+    to{background-color: blue;}
+} 
+
+@keyframes Engenharia{
+    0% {background-color: blue;}
+    25% {background-color: blueviolet;}
+    50% {background-color: yellowgreen;}
+    100% {background-color: pink;}
+}
+
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    float: left;
+    animation-name: Engenharia;
+    animation-duration: 4;
+}
+
+
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    float: left;
+    animation-name: senai;
+    animation-duration: 3;
+}
+
+div1:hover{
+    border-radius: 20px;
+    background-color: white;
+}
+
