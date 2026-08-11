@@ -73,3 +73,29 @@ def connect_to_next_port(self, minimum: int) -> int:
     """
 ```
 
+## Aula 2
+
+* Ao abrir um projeto python, deve ser criado um ambiente para evitar problemas de compatibilidade de versão no futuro
+(Acho que deve funcionar como um container)
+
+---
+
+1. Criar o ambiente
+```python -m venv .venv```
+
+Para criar um ambiente nomeado venv
+
+
+2. Acessar o ambiente
+
+Digitar no terminal:
+
+```$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
+
+Em seguida:
+
+```./.venv/Scripts/activate```
+
+Dentro da venv, é possível executar o código.
+
+Nessa aula, foi criado o jogo [Game2D_Alien](Alta_Qualidade_de_Software\Game2D_Alien\src\alien_invasion.py), onde é possível realizar o passo a passo acima.
