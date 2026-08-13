@@ -72,6 +72,7 @@ def connect_to_next_port(self, minimum: int) -> int:
         ConnectionError: if no available port is found.
     """
 ```
+---
 
 ## Aula 2
 
@@ -99,3 +100,26 @@ Em seguida:
 Dentro da venv, é possível executar o código.
 
 Nessa aula, foi criado o jogo [Game2D_Alien](Alta_Qualidade_de_Software\Game2D_Alien\src\alien_invasion.py), onde é possível realizar o passo a passo acima.
+
+Para rodar o jogo, em seguida inserir o comando ```pip install pygame-ce``` 
+
+---
+
+## Aula 3
+
+* Ao finalisar de escrever o código: realizar uma análise estática
+    Sem rodar o c´podigo, analisar sua estrutura para identificar pontos de melhora
+
+Ferramentas:
+1. 
+
+### Conventional Commits
+Padrão de commits
+
+[Documentação](https://www.conventionalcommits.org/pt-br/v1.0.0/)
+
+### Criando branchs
+
+* main
+    * develop
+        * feature\analise-estatica
