@@ -133,4 +133,3 @@ Cria um abranch chamada branch
 ```git switch -c feature/analise-estatica```
 
 ```git branch -v``` Monstra os branchs criados
-.
