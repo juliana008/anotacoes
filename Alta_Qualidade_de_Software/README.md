@@ -133,3 +133,18 @@ Cria um abranch chamada branch
 ```git switch -c feature/analise-estatica```
 
 ```git branch -v``` Monstra os branchs criados
+
+
+Ruff é um aferramenta de análise estática de código para Python usada para verificar qualidade, estilo e possiveis erros no código sem executá-lo
+1. ```pip install ruff```
+
+2. Acessar a pasta src 
+```$ cd src```
+````ruff check .```
+Para checar os erros que o ruff consegue perceber
+
+3. Corrigir os erros que ele encontra:
+```ruff check . --fix```
+
+4. Formatar o código:
+```ruff format .```
