@@ -123,3 +123,13 @@ Padrão de commits
 * main
     * develop
         * feature\analise-estatica
+
+#### Comandos
+
+Criar uma branch:
+````git switch -c develop```
+Cria um abranch chamada branch
+
+```git switch -c feature/analise-estatica```
+
+```git branch -v``` Monstra os branchs criados
