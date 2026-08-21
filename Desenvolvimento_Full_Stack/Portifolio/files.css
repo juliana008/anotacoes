@@ -1,0 +1,108 @@
+@keyframes tema {
+
+    /*animação*/
+    0% {
+        background-color: rgb(55, 0, 255);
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: rgb(61, 32, 190);
+        left: 0;
+        top: 0;
+    }
+
+    50% {
+        background-color: rgb(98, 43, 226);
+        left: 0;
+        top: 0;
+    }
+
+    75% {
+        background-color: rgb(124, 82, 163);
+        left: 0;
+        top: 0;
+    }
+
+    100% {
+        background-color: blueviolet;
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes cabecalho {
+    0% {
+        background-color: #302b63;
+    }
+
+    50% {
+        background-color: #24243e;
+    }
+
+    100% {
+        background-color: #3f3b6b;
+    }
+}
+
+#div1 {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation-name: tema;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#div2 {
+    width: 90vw;
+    height: auto;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 20px;
+    background-color:whitesmoke;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#div3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    background-color: rgb(235, 234, 234);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Ensure navbar is above header and visible */
+nav.navbar {
+    position: relative;
+    z-index: 9999;
+    margin-top: 10px;
+}
+
+#comp{
+    width: fit-content;
+    height: fit-content;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    animation-name: tema;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
