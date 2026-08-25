@@ -134,7 +134,7 @@ Cria um abranch chamada branch
 
 ```git branch -v``` Monstra os branchs criados
 
-#### Ruff
+### Ruff
 Ruff é um aferramenta de análise estática de código para Python usada para verificar qualidade, estilo e possiveis erros no código sem executá-lo
 1. ```pip install ruff```
 
@@ -163,7 +163,7 @@ Verifica se os tipos das variáveis estão coerentes.
 
 4. Para uma avaliação mais rigorosa: ```mypy --strict .```
 
-#### Type Hints
+### Type Hints
 
 Type hints são anotações de tipos em Python usadas para indicar qual tipo de dado uma variável, parâmetro ou retorno de função deve ter.
 
@@ -182,7 +182,7 @@ return a+b
 ```
 * A seta indica o tipo que a função retorna
 
-#### Mokey Type
+### Mokey Type
 Ferramenta para aplicar o Type Hints
 
 * Gera type Hints a partir da execução
@@ -204,3 +204,13 @@ monkeytype apply settings
 ```
 
 Em todos os aqruivos que deseja executar as modificações
+
+## Aula 4
+
+### SOLID
+
+* **S** (Single Responsibility Principle): Cada parte do código faz só uma coisa. Tem só um motivo para mudar.
+* **O** (Open-Closed Principle): O código fica aberto para receber novas funções, mas fechado para mexer no que já funciona.
+* **L** (Liskov Substitution Principle): Objetos filhos devem poder trocar com os objetos pais sem quebrar o programa.
+* **I** (Interface Segregation Principle): É melhor ter várias regras pequenas e específicas do que uma regra gigante que obriga a usar o que não precisa.
+* **D** (Dependency Inversion Principle): O código deve depender de ideias gerais e abstratas, e não de detalhes específicos que mudam fácil
