@@ -19,6 +19,7 @@ function App(){
     }
 
     function calcularImc(evento){
+        evento.preventDefault();
         const pesoConvertido = Number(peso.replace(",","."));
         const alturaConvertida = Number(altura.replace(",","."));
 
@@ -69,11 +70,11 @@ function App(){
                     <h2>Resultado</h2> 
                     <p>Olá, <strong>{nome}</strong>!</p> 
                     <br /> 
-                    <p>Seu IMC é <strong>{resultado.value}</strong></p>
+                        <p>Seu IMC é <strong>{resultado.valor}</strong></p>
                     <br />
                     <p>
-                        Classificação:("")
-                        <strong> {resultado.classificacao}</strong>
+                            Classificação:
+                            <strong> {resultado.classificacao}</strong>
                     </p>
                     </section>)
                 }
