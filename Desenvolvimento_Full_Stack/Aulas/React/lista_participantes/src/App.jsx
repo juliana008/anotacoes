@@ -3,80 +3,76 @@ import './App.css'
 
 function App(){
     const[nome, setNome]=useState("");
-    const[peso, setPeso]=useState("");
-    const[altura, setAltura]=useState("");
-    const[resultado, setResultado]=useState(null);
+    const[participantes, setParticipantes]=useState([]);
     const[erro, setErro]=useState("");
-    //const[, set]=useState();
 
-    function classificarImc(imc){
-        if(imc < 18.5){ return "Abaixo do peso";}
-        else if(imc < 25){return "Peso ideal";}
-        else if(imc < 30){return "Sobrepeso";}
-        else if(imc < 35){return "Obesidade 1";}
-        else if(imc < 40){return "Obesidade 2";}
-        return "Obesidade 3";
-    }
-
-    function calcularImc(evento){
+    function adicionarParticipante(evento){
         evento.preventDefault();
-        const pesoConvertido = Number(peso.replace(",","."));
-        const alturaConvertida = Number(altura.replace(",","."));
 
-        if(nome.trim() === "" || pesoConvertido<=0 || alturaConvertida<=0){
-            setErro("Preencha com valores válidos");
-            setResultado(null);
+        if(nome.trim() === ""){
+            setErro("Por favor, digite um nome");
             return;
         }
 
-        const imcCalculado = pesoConvertido/(alturaConvertida * alturaConvertida);
-        setResultado({
-            valor: imcCalculado.toFixed(2),
-            classificacao: classificarImc(imcCalculado)
-        })
-
+        // Adicionar o participante à lista
+        setParticipantes([...participantes, { id: Date.now(), nome: nome.trim() }]);
+        setNome("");
         setErro("");
+    }
+
+    function removerParticipante(id){
+        setParticipantes(participantes.filter(p => p.id !== id));
     }
 
     function limpaForm(){
         setNome("");
-        setPeso("");
-        setAltura("");
-        setResultado(null);
         setErro("");
     }
 
-
     return (
         <main>
-            <h1>Lista de palavras</h1>
-            <p className ='Introdicao'>Informe o nome do participante</p>
+            <h1>Lista de Participantes</h1>
+            <p className='introducao'>Registre os nomes dos visitantes</p>
             
-            <form onSubmit={calcularImc}>
+            <form onSubmit={adicionarParticipante}>
                 <div className='campo'>
-                  <input id='nome' type='text' placeholder='Digite o seu nome' value={nome} onChange={(evento)=> setNome(evento.target.value)}/>
+                    <input 
+                        id='nome' 
+                        type='text' 
+                        placeholder='Digite o nome do participante' 
+                        value={nome} 
+                        onChange={(evento)=> setNome(evento.target.value)}
+                        autoFocus
+                    />
                 </div>
 
                 <div className='botoes'>
-                    <button type='submit'>Calcular IMC</button>
-                    <br />
+                    <button type='submit'>Adicionar Participante</button>
                     <button type='button' onClick={limpaForm}>Limpar</button>
                 </div>
                 {erro && <p className="msgerro">{erro}</p>}
-                {resultado && (
-                    <section className='resultado'> 
-                    <h2>Resultado</h2> 
-                    <p>Olá, <strong>{nome}</strong>!</p> 
-                    <br /> 
-                        <p>Seu IMC é <strong>{resultado.valor}</strong></p>
-                    <br />
-                    <p>
-                            Classificação:
-                            <strong> {resultado.classificacao}</strong>
-                    </p>
-                    </section>)
-                }
             </form>
+
+            {participantes.length > 0 && (
+                <section className='resultado'> 
+                    <h2>Participantes Registrados ({participantes.length})</h2> 
+                    <ul className='lista-participantes'>
+                        {participantes.map((p) => (
+                            <li key={p.id} className='participante-item'>
+                                <span>{p.nome}</span>
+                                <button 
+                                    type='button' 
+                                    className='btn-remover'
+                                    onClick={() => removerParticipante(p.id)}
+                                    aria-label={`Remover ${p.nome}`}
+                                >
+                                    ✕
+                                </button>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
         </main>
     );
 }
