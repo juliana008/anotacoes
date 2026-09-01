@@ -1,6 +1,5 @@
 from desconto import *
 
-
 valor = int(input("Digite o valor da compra: "))
 
 

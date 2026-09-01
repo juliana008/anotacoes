@@ -1,5 +1,5 @@
-import sys
 import pygame
+
 
 class GameRenderer:
     """Responsável apenas por desenhar os elementos do jogo na tela."""
