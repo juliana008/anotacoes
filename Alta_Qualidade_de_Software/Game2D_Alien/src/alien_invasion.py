@@ -10,9 +10,7 @@ from game_events import GameEventHandler
 from game_renderer import GameRenderer
 
 from alien import Alien
-from bullet import Bullet
-from settings import Settings
-from ship import Ship
+from fast_alien import FastAlien
 
 
 class AlienInvasion:
@@ -37,7 +35,7 @@ class AlienInvasion:
 
         
         self.bullet_manager = BulletManager(self.screen, self.settings, self.ship)
-        self.fleet_manager = FleetManager(self.screen, self.settings, self.ship)
+        self.fleet_manager = FleetManager(self.screen, self.settings, self.ship, FastAlien)
         self.event_handler = GameEventHandler(self.ship, self.bullet_manager)
         self.renderer = GameRenderer(
             self.screen,
