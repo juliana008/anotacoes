@@ -133,3 +133,74 @@ Cria um abranch chamada branch
 ```git switch -c feature/analise-estatica```
 
 ```git branch -v``` Monstra os branchs criados
+
+#### Ruff
+Ruff é um aferramenta de análise estática de código para Python usada para verificar qualidade, estilo e possiveis erros no código sem executá-lo
+1. ```pip install ruff```
+
+2. Acessar a pasta src 
+```$ cd src``` 
+
+    ```ruff check .```
+Para checar os erros que o ruff consegue perceber
+
+3. Corrigir os erros que ele encontra:
+```ruff check . --fix```
+
+4. Formatar o código:
+```ruff format .``` --> De acordo com o pip8
+
+#### Mypy
+
+Verificação de tipagem estática.
+Verifica se os tipos das variáveis estão coerentes.
+
+1. Instalação> ```pip install mypy```
+
+2. Entrar na pasta onde estão os arquivos (src)
+
+3. Executar: ```mypy .```
+
+4. Para uma avaliação mais rigorosa: ```mypy --strict .```
+
+#### Type Hints
+
+Type hints são anotações de tipos em Python usadas para indicar qual tipo de dado uma variável, parâmetro ou retorno de função deve ter.
+
+Melhora a legibilidade de código e na detecção de erros
+
+Antes:
+```
+def soma(a, b):
+return a+b
+```
+
+Depois:
+```
+def soma(a: int, b: int) -> int:
+return a+b
+```
+* A seta indica o tipo que a função retorna
+
+#### Mokey Type
+Ferramenta para aplicar o Type Hints
+
+* Gera type Hints a partir da execução
+
+1. Instalar> ```pip install monkeytype```
+
+2. Rodar o arquivo desejado na pasta onde estão localizados os arquivos (src)
+```
+monkeytype run alien_invasion.py
+```
+
+3. Após encerrar o programa, rodar:
+```
+monkeytype apply alien_invasion
+monkeytype apply ship
+monkeytype apply alien
+monkeytype apply bullet
+monkeytype apply settings
+```
+
+Em todos os aqruivos que deseja executar as modificações
