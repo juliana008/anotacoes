@@ -2,15 +2,19 @@
   0% {
     background-color: rgb(55, 0, 255);
   }
+
   25% {
     background-color: rgb(61, 32, 190);
   }
+
   50% {
     background-color: rgb(98, 43, 226);
   }
+
   75% {
     background-color: rgb(124, 82, 163);
   }
+
   100% {
     background-color: blueviolet;
   }
@@ -20,9 +24,11 @@
   0% {
     background-color: #302b63;
   }
+
   50% {
     background-color: #24243e;
   }
+
   100% {
     background-color: #3f3b6b;
   }
