@@ -158,7 +158,7 @@ function App() {
           <div id="comp">Matlab</div>
           <div id="comp">C++</div>
           <div id="comp">Git</div>
-          <div id="comp">Sistemas embarcados</div>
+          <div id="comp">Linux embarcado</div>
           <div id="comp">Dispositivos IoT</div>
           <div id="comp">Simulações acústicas</div>
         </marquee>
