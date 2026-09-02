@@ -17,7 +17,7 @@ const hobbies = [
     },
     {
         imagem: 'https://tm.ibxk.com.br/2026/03/09/peak_80e286fceb.jpg?ims=400x0/filters:quality(70)',
-        nome: 'Jogos colaborativos online',
+        nome: 'Jogos online',
     },
 ];
 
