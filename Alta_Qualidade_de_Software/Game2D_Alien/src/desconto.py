@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from interfaces import *
 
 
 class Desconto(ABC):
@@ -7,31 +8,23 @@ class Desconto(ABC):
         pass
     
     
-class normal(Desconto):
+class normal(IDesconto):             
+    def calcular(self, valor) -> float:
+        return (valor*0.1)
+
+class DescontoVIP(IDesconto, ICupom, IVIP):
+    def calcular(self, valor):
+        return valor * 0.2
     
-    def __init__(self, valor):
-        self.valor = valor
-                
-
-    def calcular(self) -> float:
-        return (self.valor*0.1)
-
-class vip(Desconto):
-
-    def __init__(self, valor):
-            self.valor = valor
-                    
+    def aplicar_cupom(self, codigo):
+     return True
+ 
+    def validar_usuario_vip(self, usuario):
+        return usuario=="vip"
     
-    def calcular(self) -> float:
-        return (self.valor*0.2)
 
-
-class premium(Desconto):
-
-    def __init__(self, valor):
-            self.valor = valor
-                    
+class premium(IDesconto):
     
-    def calcular(self) -> float:
-        return (self.valor*0.3)
+    def calcular(self, valor) -> float:
+        return (valor*0.3)
     

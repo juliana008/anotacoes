@@ -211,9 +211,14 @@ Em todos os aqruivos que deseja executar as modificações
 
 * **S** (Single Responsibility Principle): Cada parte do código faz só uma coisa. Tem só um motivo para mudar.
 * **O** (Open-Closed Principle): O código fica aberto para receber novas funções, mas fechado para mexer no que já funciona.
-* **L** (Liskov Substitution Principle): Objetos filhos devem poder trocar com os objetos pais sem quebrar o programa.
+* **L** (Liskov Substitution Principle): Objetos filhos devem poder substituir os objetos pais sem quebrar o programa.
 * **I** (Interface Segregation Principle): É melhor ter várias regras pequenas e específicas do que uma regra gigante que obriga a usar o que não precisa.
 * **D** (Dependency Inversion Principle): O código deve depender de ideias gerais e abstratas, e não de detalhes específicos que mudam fácil
 
 #### Open/Closed Principle:
     Deve haver uma classe mãe, para agir de modo abstrato, e classes filhas implementem funcionalidades específicas possibilitando a escalabilidade.
+
+#### Liskov Substitution Principle
+    As subclasses mantém o comportamento esperado da superclasse
+
+#### Interface Segregation Principle

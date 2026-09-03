@@ -1,12 +1,23 @@
 from desconto import *
 
-valor = int(input("Digite o valor da compra: "))
+def aplicar_desconto(desconto: Desconto, valor: float) -> float:
+    return desconto.calcular(valor)
+
+def aplicar_cupom(desconto: DescontoVIP, codigo: str) -> bool:
+    return desconto.aplicar_cupom(codigo)
+
+if __name__=="__main__":
+    
+
+    valor = float(input("Digite o valor da compra: "))
 
 
-cliente_normal = normal(valor)
-cliente_vip = vip(valor)
-cliente_premium = premium(valor)
+    cliente_normal = normal()
+    cliente_premium = premium()
+    cliente_vip = DescontoVIP()
 
-print(f"Desconto normal: R$ {cliente_normal.calcular():.2f}")
-print(f"Desconto vip: R$ {cliente_vip.calcular():.2f}")
-print(f"Desconto premium: R$ {cliente_premium.calcular():.2f}")
+    print("Desconto normal: R$ ", aplicar_desconto(cliente_normal, valor))
+    print("Desconto vip: R$ ", aplicar_desconto(cliente_vip, valor))
+    print("Desconto premium: R$ ", aplicar_desconto(cliente_premium, valor))
+    
+    print("Cupom VIP: ", aplicar_cupom(cliente_vip, "DESC10"))
