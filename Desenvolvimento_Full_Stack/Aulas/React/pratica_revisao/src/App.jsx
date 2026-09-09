@@ -11,6 +11,13 @@ function App() {
   const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
   const [busca, setBusca] = useState('')
   const [atividadeSelecionada, setAtividadeSelecionada] = useState(null)
+  const [formulario, setFormulario] = useState({
+    nome: '',
+    email: '',
+    assunto: '',
+    mensagem: '',
+  })
+  const [envioRealizado, setEnvioRealizado] = useState(false)
 
   useEffect(() => {
     if (!atividadeSelecionada) {
@@ -43,6 +50,25 @@ function App() {
 
     return atendeFiltro && atendeBusca
   })
+
+  const handleFormularioChange = (event) => {
+    const { name, value } = event.target
+    setFormulario((estadoAnterior) => ({
+      ...estadoAnterior,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    if (!formulario.nome || !formulario.email || !formulario.assunto || !formulario.mensagem) {
+      return
+    }
+
+    setEnvioRealizado(true)
+    setFormulario({ nome: '', email: '', assunto: '', mensagem: '' })
+  }
 
   const atividadesConcluidas = atividades.filter(
     (atividade) => atividade.status === 'Concluída',
@@ -143,6 +169,70 @@ function App() {
               ))}
             </div>
           )}
+        </section>
+
+        <section id="contato" className="bloco">
+          <div className="secao__cabecalho">
+            <p className="eyebrow">Contato</p>
+            <h2>Entre em contato</h2>
+          </div>
+
+          <form className="formulario-contato" onSubmit={handleSubmit}>
+            <div className="campo-formulario">
+              <label htmlFor="nome">Nome</label>
+              <input
+                id="nome"
+                name="nome"
+                type="text"
+                value={formulario.nome}
+                onChange={handleFormularioChange}
+                required
+              />
+            </div>
+
+            <div className="campo-formulario">
+              <label htmlFor="email">E-mail</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={formulario.email}
+                onChange={handleFormularioChange}
+                required
+              />
+            </div>
+
+            <div className="campo-formulario">
+              <label htmlFor="assunto">Assunto</label>
+              <input
+                id="assunto"
+                name="assunto"
+                type="text"
+                value={formulario.assunto}
+                onChange={handleFormularioChange}
+                required
+              />
+            </div>
+
+            <div className="campo-formulario">
+              <label htmlFor="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                value={formulario.mensagem}
+                onChange={handleFormularioChange}
+                required
+              />
+            </div>
+
+            <button type="submit" className="botao-formulario">
+              Enviar mensagem
+            </button>
+
+            {envioRealizado && (
+              <p className="mensagem-sucesso">Mensagem enviada com sucesso!</p>
+            )}
+          </form>
         </section>
       </main>
 
