@@ -6,6 +6,15 @@ import CardAtividade from './components/CardAtividade'
 import Sobre from './components/Sobre'
 import atividades from './data/atividades'
 
+const checklistAcessibilidade = [
+  'Headings organizados em ordem lógica',
+  'Labels associados aos campos do formulário',
+  'Foco visível em links e botões',
+  'Contraste suficiente em textos e botões',
+  'Status indicados por texto e cor',
+  'Navegação por teclado preservada',
+]
+
 const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 
 function App() {
@@ -100,6 +109,16 @@ function App() {
 
       <main>
         <Sobre />
+
+        <section className="bloco acessibilidade">
+          <p className="eyebrow">Acessibilidade</p>
+          <h2>Revisão final de uso</h2>
+          <ul className="acessibilidade__lista">
+            {checklistAcessibilidade.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
 
         <section className="bloco progresso">
           <p className="eyebrow">Progresso</p>

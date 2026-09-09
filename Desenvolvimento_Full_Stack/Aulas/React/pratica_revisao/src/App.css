@@ -185,6 +185,19 @@
   color: var(--cor-texto-suave);
 }
 
+.acessibilidade {
+  background: linear-gradient(135deg, #f0fdf4, #f8fafc);
+}
+
+.acessibilidade__lista {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
 .sobre__conteudo {
   display: grid;
   gap: 12px;
