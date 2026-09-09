@@ -9,11 +9,21 @@ const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 
 function App() {
   const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
+  const [busca, setBusca] = useState('')
 
-  const atividadesFiltradas =
-    filtroSelecionado === 'Todos'
-      ? atividades
-      : atividades.filter((atividade) => atividade.tecnologia.includes(filtroSelecionado))
+  const atividadesFiltradas = atividades.filter((atividade) => {
+    const atendeFiltro =
+      filtroSelecionado === 'Todos' ||
+      atividade.tecnologia.includes(filtroSelecionado)
+
+    const textoBusca = busca.trim().toLowerCase()
+    const atendeBusca =
+      textoBusca === '' ||
+      atividade.titulo.toLowerCase().includes(textoBusca) ||
+      atividade.descricao.toLowerCase().includes(textoBusca)
+
+    return atendeFiltro && atendeBusca
+  })
 
   return (
     <div className="pagina">
@@ -55,19 +65,34 @@ function App() {
             ))}
           </div>
 
-          <div className="cards">
-            {atividadesFiltradas.map((atividade) => (
-              <CardAtividade
-                key={atividade.id}
-                numero={atividade.numero}
-                titulo={atividade.titulo}
-                descricao={atividade.descricao}
-                tecnologia={atividade.tecnologia}
-                status={atividade.status}
-                link={atividade.link}
-              />
-            ))}
-          </div>
+          <label className="campo-busca" htmlFor="busca-atividade">
+            <span>Buscar atividade</span>
+            <input
+              id="busca-atividade"
+              type="text"
+              value={busca}
+              onChange={(event) => setBusca(event.target.value)}
+              placeholder="Digite um título ou descrição"
+            />
+          </label>
+
+          {atividadesFiltradas.length === 0 ? (
+            <p className="sem-resultado">Nenhuma atividade encontrada.</p>
+          ) : (
+            <div className="cards">
+              {atividadesFiltradas.map((atividade) => (
+                <CardAtividade
+                  key={atividade.id}
+                  numero={atividade.numero}
+                  titulo={atividade.titulo}
+                  descricao={atividade.descricao}
+                  tecnologia={atividade.tecnologia}
+                  status={atividade.status}
+                  link={atividade.link}
+                />
+              ))}
+            </div>
+          )}
         </section>
       </main>
 

@@ -167,6 +167,32 @@
   color: #fff;
 }
 
+.campo-busca {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--cor-texto);
+}
+
+.campo-busca input {
+  width: min(100%, 420px);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  font: inherit;
+}
+
+.sem-resultado {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #991b1b;
+  font-weight: 600;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
