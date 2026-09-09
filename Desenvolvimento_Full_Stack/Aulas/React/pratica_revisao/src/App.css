@@ -229,6 +229,31 @@
   opacity: 0.92;
 }
 
+.status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.status--planejada {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status--andamento {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status--concluida {
+  background: #dcfce7;
+  color: #166534;
+}
+
 .rodape {
   padding: 20px 10px 0;
   text-align: center;

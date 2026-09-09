@@ -40,6 +40,7 @@ function App() {
                 titulo={atividade.titulo}
                 descricao={atividade.descricao}
                 tecnologia={atividade.tecnologia}
+                status={atividade.status}
                 link={atividade.link}
               />
             ))}
