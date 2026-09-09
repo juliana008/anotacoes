@@ -1,0 +1,74 @@
+:root {
+  --cor-fundo: #eef2ff;
+  --cor-fundo-claro: #f8fafc;
+  --cor-card: #ffffff;
+  --cor-card-alt: #f8fafc;
+  --cor-borda: #dfe6f1;
+  --cor-texto: #0f172a;
+  --cor-texto-suave: #475569;
+  --cor-primaria: #4f46e5;
+  --cor-primaria-escura: #3730a3;
+  --cor-secundaria: #ecfeff;
+  --cor-secundaria-escura: #0f766e;
+  --cor-acento: #e0e7ff;
+  --sombra-suave: 0 20px 40px rgba(79, 70, 229, 0.12);
+  --raio-pequeno: 12px;
+  --raio-medio: 16px;
+  --raio-grande: 20px;
+  --espacamento-pequeno: 12px;
+  --espacamento-medio: 20px;
+  --espacamento-grande: 32px;
+
+  font-family: Inter, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--cor-fundo) 0%, var(--cor-fundo-claro) 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  font: inherit;
+  transition: all 0.2s ease;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(79, 70, 229, 0.35);
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
