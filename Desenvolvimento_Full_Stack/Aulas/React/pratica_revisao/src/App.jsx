@@ -11,7 +11,10 @@ function App() {
   const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
   const [busca, setBusca] = useState('')
   const [atividadeSelecionada, setAtividadeSelecionada] = useState(null)
-  const [temaEscuro, setTemaEscuro] = useState(false)
+  const [temaEscuro, setTemaEscuro] = useState(() => {
+    const temaSalvo = localStorage.getItem('tema-portfolio')
+    return temaSalvo ? temaSalvo === 'escuro' : false
+  })
   const [formulario, setFormulario] = useState({
     nome: '',
     email: '',
@@ -19,6 +22,10 @@ function App() {
     mensagem: '',
   })
   const [envioRealizado, setEnvioRealizado] = useState(false)
+
+  useEffect(() => {
+    localStorage.setItem('tema-portfolio', temaEscuro ? 'escuro' : 'claro')
+  }, [temaEscuro])
 
   useEffect(() => {
     if (!atividadeSelecionada) {
