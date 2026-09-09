@@ -1,16 +1,47 @@
-# React + Vite
+# Portfólio de Atividades
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Este projeto é uma homepage em React criada para registrar as entregas acadêmicas desenvolvidas ao longo do curso. A aplicação apresenta atividades numeradas de 1 a 30, com filtros, busca, progresso, modal de detalhes, formulário de contato, tema claro/escuro e seção de apresentação pessoal.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- JavaScript
+- HTML semântico
+- CSS moderno
+- Git
 
-## React Compiler
+## Pré-requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js instalado
+- npm instalado
+- Git instalado
 
-## Expanding the Oxlint configuration
+## Como executar localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Estrutura principal
+
+```text
+src/
+├── components/
+├── data/
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Autor
+
+Nome do aluno
+
+## Observações
+
+- O projeto foi pensado para ser responsivo e acessível.
+- A documentação e o histórico de commits acompanham o desenvolvimento do portfolio.
+- Os links e a URL da aplicação publicada devem ser atualizados na etapa final.
