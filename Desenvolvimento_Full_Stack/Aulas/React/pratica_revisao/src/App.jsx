@@ -28,6 +28,10 @@ function App() {
   const atividadesConcluidas = atividades.filter(
     (atividade) => atividade.status === 'Concluída',
   ).length
+  const totalAtividadesEsperado = 30
+  const percentualConcluido = Math.round(
+    (atividadesConcluidas / totalAtividadesEsperado) * 100,
+  )
 
   return (
     <div className="pagina">
@@ -52,7 +56,24 @@ function App() {
 
         <section className="bloco progresso">
           <p className="eyebrow">Progresso</p>
-          <h2>{atividadesConcluidas} de 30 concluídas</h2>
+          <div className="progresso__cabecalho">
+            <h2>{atividadesConcluidas} de 30 concluídas</h2>
+            <span>{percentualConcluido}%</span>
+          </div>
+
+          <div
+            className="barra-progresso"
+            role="progressbar"
+            aria-label={`Progresso das atividades: ${percentualConcluido}% concluído`}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={percentualConcluido}
+          >
+            <span
+              className="barra-progresso__fill"
+              style={{ width: `${percentualConcluido}%` }}
+            />
+          </div>
         </section>
 
         <section id="atividades" className="bloco">
