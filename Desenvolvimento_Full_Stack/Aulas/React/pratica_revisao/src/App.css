@@ -211,24 +211,22 @@
   letter-spacing: 0.02em;
 }
 
-.card button {
+.card__link {
   margin-top: auto;
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background: linear-gradient(135deg, #111827, #1f2937);
   color: #fff;
   padding: 0.8rem 1rem;
   font-weight: 600;
-  cursor: pointer;
+  text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
-.card button:hover {
+.card__link:hover {
   opacity: 0.92;
-}
-
-.card button:hover {
-  background: linear-gradient(135deg, #1f2937, #111827);
 }
 
 .rodape {

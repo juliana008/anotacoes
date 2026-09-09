@@ -1,6 +1,7 @@
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import Rodape from './components/Rodape'
+import CardAtividade from './components/CardAtividade'
 
 const atividades = [
   {
@@ -95,13 +96,14 @@ function App() {
 
           <div className="cards">
             {atividades.map((atividade) => (
-              <article className="card" key={atividade.numero}>
-                <span className="card__numero">{atividade.numero}</span>
-                <h3>{atividade.titulo}</h3>
-                <p>{atividade.descricao}</p>
-                <small>{atividade.tecnologia}</small>
-                <button type="button">Ver atividade</button>
-              </article>
+              <CardAtividade
+                key={atividade.numero}
+                numero={atividade.numero}
+                titulo={atividade.titulo}
+                descricao={atividade.descricao}
+                tecnologia={atividade.tecnologia}
+                link={atividade.link}
+              />
             ))}
           </div>
         </section>
