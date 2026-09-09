@@ -15,6 +15,12 @@ const checklistAcessibilidade = [
   'Navegação por teclado preservada',
 ]
 
+const historicoGit = [
+  'Branch principal: aulasFullStack',
+  'Últimos commits organizados por funcionalidade',
+  'Tag local criada: v1.0.0',
+]
+
 const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 
 function App() {
@@ -115,6 +121,16 @@ function App() {
           <h2>Revisão final de uso</h2>
           <ul className="acessibilidade__lista">
             {checklistAcessibilidade.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="bloco git-historico">
+          <p className="eyebrow">Git</p>
+          <h2>Histórico do projeto</h2>
+          <ul className="git-historico__lista">
+            {historicoGit.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
