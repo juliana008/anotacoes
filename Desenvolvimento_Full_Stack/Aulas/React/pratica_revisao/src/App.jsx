@@ -1,5 +1,6 @@
 import './App.css'
 import Cabecalho from './components/Cabecalho'
+import Rodape from './components/Rodape'
 
 const atividades = [
   {
@@ -106,9 +107,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="rodape" id="contato">
-        <p>© 2026 - Portfólio acadêmico</p>
-      </footer>
+      <Rodape />
     </div>
   )
 }
