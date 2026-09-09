@@ -22,6 +22,15 @@ const historicoGit = [
 ]
 
 const repositorioRemoto = 'https://github.com/seu-usuario/portfolio-atividades'
+const urlVercel = 'https://portfolio-atividades.vercel.app'
+
+const checklistPublicacao = [
+  'Menu e âncoras funcionando corretamente',
+  'Filtros, busca e modal testados',
+  'Formulário respondendo ao envio',
+  'Responsividade validada em telas pequenas',
+  'Acesso público confirmado na Vercel',
+]
 
 const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 
@@ -148,6 +157,23 @@ function App() {
           <a className="botao-repositorio" href={repositorioRemoto} target="_blank" rel="noreferrer">
             Abrir repositório
           </a>
+        </section>
+
+        <section className="bloco vercel">
+          <p className="eyebrow">Vercel</p>
+          <h2>Publicação final</h2>
+          <p>
+            A aplicação será implantada em ambiente público e validada em produção com os
+            principais fluxos da homepage testados.
+          </p>
+          <a className="botao-vercel" href={urlVercel} target="_blank" rel="noreferrer">
+            Abrir aplicação publicada
+          </a>
+          <ul className="vercel__lista">
+            {checklistPublicacao.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </section>
 
         <section className="bloco progresso">
