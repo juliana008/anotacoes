@@ -185,6 +185,20 @@
   color: var(--cor-texto-suave);
 }
 
+.sobre__conteudo {
+  display: grid;
+  gap: 12px;
+}
+
+.sobre__lista {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: var(--cor-texto);
+  font-weight: 600;
+}
+
 .progresso {
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
 }

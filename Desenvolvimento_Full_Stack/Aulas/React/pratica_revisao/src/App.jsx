@@ -3,6 +3,7 @@ import './App.css'
 import Cabecalho from './components/Cabecalho'
 import Rodape from './components/Rodape'
 import CardAtividade from './components/CardAtividade'
+import Sobre from './components/Sobre'
 import atividades from './data/atividades'
 
 const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
@@ -98,14 +99,7 @@ function App() {
       </nav>
 
       <main>
-        <section id="sobre" className="bloco">
-          <p className="eyebrow">Sobre</p>
-          <h2>Objetivo do portfólio</h2>
-          <p>
-            Este projeto reúne as entregas realizadas ao longo do curso, demonstrando o
-            crescimento em estrutura, lógica e apresentação visual.
-          </p>
-        </section>
+        <Sobre />
 
         <section className="bloco progresso">
           <p className="eyebrow">Progresso</p>
