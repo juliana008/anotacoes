@@ -1,4 +1,12 @@
-function CardAtividade({ numero, titulo, descricao, tecnologia, status, link }) {
+function CardAtividade({
+  numero,
+  titulo,
+  descricao,
+  tecnologia,
+  status,
+  link,
+  onAbrirDetalhes,
+}) {
   const statusClass = {
     Planejada: 'status status--planejada',
     'Em andamento': 'status status--andamento',
@@ -12,9 +20,9 @@ function CardAtividade({ numero, titulo, descricao, tecnologia, status, link }) 
       <p>{descricao}</p>
       <small>{tecnologia}</small>
       <span className={statusClass}>{status}</span>
-      <a href={link} className="card__link" target="_blank" rel="noreferrer">
+      <button type="button" className="card__link" onClick={onAbrirDetalhes}>
         Ver atividade
-      </a>
+      </button>
     </article>
   )
 }

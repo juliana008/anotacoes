@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import Rodape from './components/Rodape'
@@ -10,6 +10,25 @@ const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 function App() {
   const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
   const [busca, setBusca] = useState('')
+  const [atividadeSelecionada, setAtividadeSelecionada] = useState(null)
+
+  useEffect(() => {
+    if (!atividadeSelecionada) {
+      return undefined
+    }
+
+    const fecharModalAoPressionarTecla = (event) => {
+      if (event.key === 'Escape') {
+        setAtividadeSelecionada(null)
+      }
+    }
+
+    window.addEventListener('keydown', fecharModalAoPressionarTecla)
+
+    return () => {
+      window.removeEventListener('keydown', fecharModalAoPressionarTecla)
+    }
+  }, [atividadeSelecionada])
 
   const atividadesFiltradas = atividades.filter((atividade) => {
     const atendeFiltro =
@@ -119,12 +138,45 @@ function App() {
                   tecnologia={atividade.tecnologia}
                   status={atividade.status}
                   link={atividade.link}
+                  onAbrirDetalhes={() => setAtividadeSelecionada(atividade)}
                 />
               ))}
             </div>
           )}
         </section>
       </main>
+
+      {atividadeSelecionada && (
+        <div className="modal__backdrop" onClick={() => setAtividadeSelecionada(null)}>
+          <div
+            className="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-titulo"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="modal__fechar"
+              aria-label="Fechar detalhes"
+              onClick={() => setAtividadeSelecionada(null)}
+            >
+              ×
+            </button>
+
+            <p className="eyebrow">Detalhes da atividade</p>
+            <h3 id="modal-titulo">{atividadeSelecionada.titulo}</h3>
+            <p className="modal__meta">
+              {atividadeSelecionada.tecnologia} • {atividadeSelecionada.status}
+            </p>
+            <p>{atividadeSelecionada.descricao}</p>
+            <p className="modal__texto">
+              Esta entrega reforçou a prática de organização de interfaces, uso de
+              componentes e clareza na experiência do usuário.
+            </p>
+          </div>
+        </div>
+      )}
 
       <Rodape />
     </div>
