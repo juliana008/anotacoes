@@ -31,8 +31,7 @@ O nome do componentes começa com letra maiúscula
 
 
 ```
-npm create vite@latest [nome do projeto] -- --
-template react
+npm create vite@latest [nome do projeto] -- --template react
 cd meu-projeto
 npm install
 npm run dev
