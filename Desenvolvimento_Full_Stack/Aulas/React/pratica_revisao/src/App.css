@@ -129,24 +129,32 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: var(--cor-card-alt);
+  background: linear-gradient(180deg, var(--cor-card-alt) 0%, #f1f5f9 100%);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio-medio);
   padding: var(--espacamento-medio);
   text-align: left;
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(79, 70, 229, 0.35);
+  box-shadow: 0 18px 24px rgba(79, 70, 229, 0.08);
 }
 
 .card__numero {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--raio-pequeno);
-  background: var(--cor-acento);
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--cor-acento), #dbeafe);
   color: var(--cor-primaria-escura);
   font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .card h3 {
@@ -158,6 +166,7 @@
 .card p {
   margin: 0;
   color: var(--cor-texto-suave);
+  min-height: 72px;
 }
 
 .card small {
@@ -174,7 +183,7 @@
   margin-top: auto;
   border: none;
   border-radius: 10px;
-  background: #111827;
+  background: linear-gradient(135deg, #111827, #1f2937);
   color: #fff;
   padding: 0.8rem 1rem;
   font-weight: 600;
@@ -182,7 +191,7 @@
 }
 
 .card button:hover {
-  background: #1f2937;
+  background: linear-gradient(135deg, #1f2937, #111827);
 }
 
 .rodape {
