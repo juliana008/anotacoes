@@ -211,6 +211,23 @@
   font-weight: 600;
 }
 
+.repositorio {
+  background: linear-gradient(135deg, #f5f3ff, #f8fafc);
+}
+
+.botao-repositorio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background: #111827;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.3rem;
+  font-weight: 700;
+}
+
 .sobre__conteudo {
   display: grid;
   gap: 12px;

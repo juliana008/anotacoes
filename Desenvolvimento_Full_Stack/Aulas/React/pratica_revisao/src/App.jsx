@@ -21,6 +21,8 @@ const historicoGit = [
   'Tag local criada: v1.0.0',
 ]
 
+const repositorioRemoto = 'https://github.com/seu-usuario/portfolio-atividades'
+
 const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
 
 function App() {
@@ -134,6 +136,18 @@ function App() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+        </section>
+
+        <section className="bloco repositorio">
+          <p className="eyebrow">GitHub</p>
+          <h2>Repositório remoto</h2>
+          <p>
+            O projeto foi preparado para publicação em um repositório remoto, mantendo o
+            histórico de commits e a entrega final organizada.
+          </p>
+          <a className="botao-repositorio" href={repositorioRemoto} target="_blank" rel="noreferrer">
+            Abrir repositório
+          </a>
         </section>
 
         <section className="bloco progresso">
