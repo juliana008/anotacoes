@@ -25,6 +25,10 @@ function App() {
     return atendeFiltro && atendeBusca
   })
 
+  const atividadesConcluidas = atividades.filter(
+    (atividade) => atividade.status === 'Concluída',
+  ).length
+
   return (
     <div className="pagina">
       <Cabecalho />
@@ -44,6 +48,11 @@ function App() {
             Este projeto reúne as entregas realizadas ao longo do curso, demonstrando o
             crescimento em estrutura, lógica e apresentação visual.
           </p>
+        </section>
+
+        <section className="bloco progresso">
+          <p className="eyebrow">Progresso</p>
+          <h2>{atividadesConcluidas} de 30 concluídas</h2>
         </section>
 
         <section id="atividades" className="bloco">

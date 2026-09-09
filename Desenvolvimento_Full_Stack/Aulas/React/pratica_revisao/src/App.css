@@ -140,6 +140,14 @@
   color: var(--cor-texto-suave);
 }
 
+.progresso {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.progresso h2 {
+  margin: 0;
+}
+
 .secao__cabecalho {
   margin-bottom: 20px;
 }
