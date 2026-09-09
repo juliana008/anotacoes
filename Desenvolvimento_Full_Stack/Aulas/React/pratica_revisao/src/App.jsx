@@ -1,10 +1,20 @@
+import { useState } from 'react'
 import './App.css'
 import Cabecalho from './components/Cabecalho'
 import Rodape from './components/Rodape'
 import CardAtividade from './components/CardAtividade'
 import atividades from './data/atividades'
 
+const filtros = ['Todos', 'HTML', 'CSS', 'React', 'Git', 'Vercel']
+
 function App() {
+  const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
+
+  const atividadesFiltradas =
+    filtroSelecionado === 'Todos'
+      ? atividades
+      : atividades.filter((atividade) => atividade.tecnologia.includes(filtroSelecionado))
+
   return (
     <div className="pagina">
       <Cabecalho />
@@ -32,8 +42,21 @@ function App() {
             <h2>Lista de entregas</h2>
           </div>
 
+          <div className="filtros" aria-label="Filtros de tecnologia">
+            {filtros.map((filtro) => (
+              <button
+                key={filtro}
+                type="button"
+                className={filtro === filtroSelecionado ? 'filtro ativo' : 'filtro'}
+                onClick={() => setFiltroSelecionado(filtro)}
+              >
+                {filtro}
+              </button>
+            ))}
+          </div>
+
           <div className="cards">
-            {atividades.map((atividade) => (
+            {atividadesFiltradas.map((atividade) => (
               <CardAtividade
                 key={atividade.id}
                 numero={atividade.numero}
