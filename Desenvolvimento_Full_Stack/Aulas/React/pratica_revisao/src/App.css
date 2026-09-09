@@ -17,6 +17,31 @@
   box-shadow: var(--sombra-suave);
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  margin-bottom: 24px;
+}
+
+.bloco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 28px 20px;
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-medio);
+}
+
 .cabecalho__texto {
   flex: 1;
   text-align: left;
