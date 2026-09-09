@@ -1,4 +1,4 @@
-function Cabecalho() {
+function Cabecalho({ temaEscuro, onToggleTema }) {
   return (
     <header className="cabecalho">
       <div className="cabecalho__texto">
@@ -13,8 +13,19 @@ function Cabecalho() {
         </a>
       </div>
 
-      <div className="cabecalho__avatar" aria-label="Avatar do estudante">
-        A
+      <div className="cabecalho__acoes">
+        <button
+          type="button"
+          className="botao-tema"
+          onClick={onToggleTema}
+          aria-label={temaEscuro ? 'Ativar tema claro' : 'Ativar tema escuro'}
+        >
+          {temaEscuro ? '☀️ Claro' : '🌙 Escuro'}
+        </button>
+
+        <div className="cabecalho__avatar" aria-label="Avatar do estudante">
+          A
+        </div>
       </div>
     </header>
   )

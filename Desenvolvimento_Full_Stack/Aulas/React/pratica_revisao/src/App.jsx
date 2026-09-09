@@ -11,6 +11,7 @@ function App() {
   const [filtroSelecionado, setFiltroSelecionado] = useState('Todos')
   const [busca, setBusca] = useState('')
   const [atividadeSelecionada, setAtividadeSelecionada] = useState(null)
+  const [temaEscuro, setTemaEscuro] = useState(false)
   const [formulario, setFormulario] = useState({
     nome: '',
     email: '',
@@ -79,8 +80,8 @@ function App() {
   )
 
   return (
-    <div className="pagina">
-      <Cabecalho />
+    <div className={temaEscuro ? 'pagina pagina--dark' : 'pagina'}>
+      <Cabecalho temaEscuro={temaEscuro} onToggleTema={() => setTemaEscuro((estado) => !estado)} />
 
       <nav className="menu" aria-label="Menu principal">
         <a href="#inicio">Início</a>
