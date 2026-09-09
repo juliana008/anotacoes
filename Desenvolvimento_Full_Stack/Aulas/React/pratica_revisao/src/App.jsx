@@ -19,6 +19,48 @@ const atividades = [
     descricao: 'Estruturei a página com cabeçalho, navegação, conteúdo principal e rodapé.',
     tecnologia: 'HTML / JSX',
   },
+  {
+    numero: '04',
+    titulo: 'Cabeçalho e identidade',
+    descricao: 'Criei a identidade visual do portfólio com nome, curso e objetivo principal.',
+    tecnologia: 'HTML / CSS',
+  },
+  {
+    numero: '05',
+    titulo: 'Menu de navegação',
+    descricao: 'Adicionei links internos para facilitar a navegação entre as seções.',
+    tecnologia: 'HTML / CSS',
+  },
+  {
+    numero: '06',
+    titulo: 'Sistema visual',
+    descricao: 'Defini variáveis de cor, tipografia, espaçamento e elementos visuais consistentes.',
+    tecnologia: 'CSS',
+  },
+  {
+    numero: '07',
+    titulo: 'Cartões de atividades',
+    descricao: 'Criei o componente visual de cada entrega com número, título e tecnologia.',
+    tecnologia: 'CSS',
+  },
+  {
+    numero: '08',
+    titulo: 'Flexbox no layout',
+    descricao: 'Ajustei alinhamento e distribuição de elementos com Flexbox para melhorar o layout.',
+    tecnologia: 'CSS',
+  },
+  {
+    numero: '09',
+    titulo: 'Grid das atividades',
+    descricao: 'Organizei os cartões em uma grade responsiva para distribuição visual equilibrada.',
+    tecnologia: 'CSS Grid',
+  },
+  {
+    numero: '10',
+    titulo: 'Responsividade',
+    descricao: 'Apliquei ajustes para manter a homepage legível em telas menores e maiores.',
+    tecnologia: 'Media Queries',
+  },
 ]
 
 function App() {

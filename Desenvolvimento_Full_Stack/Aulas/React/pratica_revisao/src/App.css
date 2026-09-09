@@ -238,9 +238,15 @@
 }
 
 @media (max-width: 768px) {
+  .pagina {
+    width: min(100% - 20px, 1100px);
+    padding-top: 20px;
+  }
+
   .cabecalho {
     flex-direction: column;
     text-align: center;
+    padding: 24px 18px;
   }
 
   .cabecalho__texto {
@@ -250,5 +256,13 @@
   .cabecalho__descricao {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .menu {
+    gap: 0.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
   }
 }
