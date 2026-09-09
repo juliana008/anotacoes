@@ -148,6 +148,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  align-items: stretch;
+}
+
+.card {
+  min-height: 260px;
 }
 
 .card {
