@@ -1,4 +1,5 @@
 import './App.css'
+import Cabecalho from './components/Cabecalho'
 
 const atividades = [
   {
@@ -66,23 +67,7 @@ const atividades = [
 function App() {
   return (
     <div className="pagina">
-      <header className="cabecalho">
-        <div className="cabecalho__texto">
-          <p className="eyebrow">Portfólio acadêmico</p>
-          <h1>Meu portfólio de atividades</h1>
-          <p className="cabecalho__descricao">
-            Estudante de desenvolvimento web compartilhando a evolução das entregas com
-            HTML, CSS, React, Git e Vercel.
-          </p>
-          <a className="botao" href="#atividades">
-            Ver atividades
-          </a>
-        </div>
-
-        <div className="cabecalho__avatar" aria-label="Avatar do estudante">
-          A
-        </div>
-      </header>
+      <Cabecalho />
 
       <nav className="menu" aria-label="Menu principal">
         <a href="#inicio">Início</a>
