@@ -35,7 +35,7 @@ function App() {
           <div className="cards">
             {atividades.map((atividade) => (
               <CardAtividade
-                key={atividade.numero}
+                key={atividade.id}
                 numero={atividade.numero}
                 titulo={atividade.titulo}
                 descricao={atividade.descricao}
