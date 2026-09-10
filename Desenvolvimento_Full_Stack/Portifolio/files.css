@@ -48,8 +48,9 @@
 
 #div1 {
     width: 100vw;
-    height: 80px;
+    height: fit-content;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
