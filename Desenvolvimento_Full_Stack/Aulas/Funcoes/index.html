@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mensagem"></p>
+    <h2>Digite o número que deseja dobrar</h2>
+    <input id="valor">
+     <button onclick="dobrar(document.getElementById('valor').value)">Enviar Valor</button>
+<p></p>
+<h2> Digite os números que deseja somar</h2>
+    <input id="numero1">
+    <input id="numero2">
+    <button onclick="somar(document.getElementById('numero1').value, document.getElementById('numero2').value)"> Enviar Valor</button>
+
+    <p></p>
+    <h2> Digite as dimensões do triângulo</h2>
+    <input id="base">
+    <input id="altura">
+    <button onclick="calcularArea(document.getElementById('base').value, document.getElementById('altura').value)"> Enviar Valor</button>
+
+     <p></p>
+     <h2> Digite a nota</h2>
+    <input id="nota">
+    <button onclick="aprovacao(document.getElementById('nota').value)"> Enviar Valor</button>
+    <script src="script.js"></script>
+
+    <p></p>
+    <h2> Digite a temperatura</h2>
+    <input id="temp">
+    <button onclick="converterCelsius(document.getElementById('temp').value)"> Enviar Valor</button>
+    <script src="script.js"></script>
+</body>
+</html>
