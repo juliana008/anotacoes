@@ -88,9 +88,13 @@ function aprovacao(media){
     }
 }
 
-function converterCelsius(f){
-    const celsius = (f - 32) * 5 / 9;
+function converterCelsius(fahrenheit){
+    const celsius = (fahrenheit - 32) * 5 / 9;
 
-    console.log(`${f} graus fareinheight são ${celsius} graus celsius`);
+    console.log(`${fahrenheit} graus fahrenheit são ${celsius} graus celsius`);
+}
+
+function cor(valorCor){
+    console.log(`A cor digitada foi: ${valorCor}`);
 }
 
