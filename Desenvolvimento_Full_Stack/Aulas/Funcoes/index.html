@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p id="mensagem"></p>
     <h2>Digite o número que deseja dobrar</h2>
     <input id="valor">
-     <button onclick="dobrar(document.getElementById('valor').value)">Enviar Valor</button>
-<p></p>
-<h2> Digite os números que deseja somar</h2>
+    <button onclick="dobrar(document.getElementById('valor').value)">Enviar Valor</button>
+    <p></p>
+    <h2> Digite os números que deseja somar</h2>
     <input id="numero1">
     <input id="numero2">
-    <button onclick="somar(document.getElementById('numero1').value, document.getElementById('numero2').value)"> Enviar Valor</button>
+    <button onclick="somar(document.getElementById('numero1').value, document.getElementById('numero2').value)"> Enviar
+        Valor</button>
 
     <p></p>
     <h2> Digite as dimensões do triângulo</h2>
     <input id="base">
     <input id="altura">
-    <button onclick="calcularArea(document.getElementById('base').value, document.getElementById('altura').value)"> Enviar Valor</button>
+    <button onclick="calcularArea(document.getElementById('base').value, document.getElementById('altura').value)">
+        Enviar Valor</button>
 
-     <p></p>
-     <h2> Digite a nota</h2>
+    <p></p>
+    <h2> Digite a nota</h2>
     <input id="nota">
     <button onclick="aprovacao(document.getElementById('nota').value)"> Enviar Valor</button>
     <script src="script.js"></script>
@@ -38,5 +42,48 @@
     <h2>Entre com a cor:</h2>
     <input type="color" id="cor">
     <button onclick="cor(document.getElementById('cor').value)"> Enviar Valor</button>
-</body>
-</html>
+
+    <h2>IMC:</h2>
+    <h3>Entre com o peso e a altura</h3>
+    <input type="number" id="peso">
+    <input type="number" id="alturap">
+    <button
+        onclick="executarCalculoIMC(document.getElementById('peso').value, document.getElementById('alturap').value)">
+        Enviar Valor</button>
+    <script src="script.js"></script>
+
+    <h2>Insira o consumo e a tarifa</h2>
+    <input type="number" id="consumo">
+    <input type="number" id="tarifa">
+    <button onclick="calcularConta(document.getElementById('consumo').value, document.getElementById('tarifa').value)">
+        Enviar Valor</button>
+    <script src="script.js"></script>
+
+    <h2>Insira o número para contar os pares:</h2>
+    <input type="number" id="numeroP">
+    <button onclick="contarPares(document.getElementById('numeroP').value)">
+        Enviar Valor</button>
+    <script src="script.js"></script>
+
+    <h2>Insira os dados do aluno:</h2>
+    <h3>Insira o nome</h3>
+    <input id="nomeA">
+    <h3>Insira o curso</h3>
+    <input id="cursoA">
+    <h3>Insira a nota</h3>
+    <input id="notasA">
+    <button onclick="cadastrarAluno(document.getElementById('nomeA').value, document.getElementById('cursoA').value, document.getElementById('notasA').value)">
+        Enviar Valor</button>
+    <script src="script.js"></script>
+
+
+    <h2>Insira os números:</h2>
+    <h3>número 1:</h3>
+    <input id="num1">
+    <h3>número 2:</h3>
+    <input id="num2">
+    <h3>Insira a operação</h3>
+    <input id="ope">
+    <button onclick="calculadora(document.getElementById('num1').value, document.getElementById('num2').value, document.getElementById('ope').value)">
+        Enviar Valor</button>
+    <script src="script.js"></script>

@@ -54,7 +54,10 @@ function dobrar(valor){
     console.log(`O dobro do valoir é: ${dobro}`);
 }
 
-function somar(numero1, numero2){
+function somar(numero1i, numero2i){
+    const numero1 = parseInt(numero1i)
+    const numero2 = parseInt(numero2i)
+
     const resultado = numero1 + numero2;
     console.log(`Soma: ${resultado}`);
 }
@@ -98,3 +101,88 @@ function cor(valorCor){
     console.log(`A cor digitada foi: ${valorCor}`);
 }
 
+function executarCalculoIMC(pesoI, alturaI) {
+    // IMPORTANTE: Mude para parseFloat para aceitar números com ponto/decimal
+    const peso = parseFloat(pesoI);
+    const altura = parseFloat(alturaI);
+
+    console.log("Peso digitado:", peso);
+    console.log("Altura digitada:", altura);
+
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        console.log("Valores inválidos! Peso e altura devem ser maiores que zero.");
+        return;
+    }
+
+    // Executa o cálculo se estiver tudo correto
+    const imc = peso / (altura * altura);
+    let classificacao = "";
+
+    if (imc < 18.5) {
+        classificacao = "Abaixo do peso";
+    } else if (imc < 25) {
+        classificacao = "Peso normal";
+    } else if (imc < 30) {
+        classificacao = "Sobrepeso";
+    } else {
+        classificacao = "Obesidade";
+    }
+
+    console.log(`IMC: ${imc.toFixed(2)} - Classificação: ${classificacao}`);
+}
+
+
+function calcularConta(consumo, tarifa) {
+    const total = consumo * tarifa;
+    console.log(`Valor da conta: R$ ${total.toFixed(2).replace('.', ',')}`);
+}
+
+
+function contarPares(numeros) {
+    let quantidade = 0;
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            quantidade++;
+        }
+    }
+    console.log(`Quantidade de valores pares: ${quantidade}`);
+}
+
+function cadastrarAluno(nome, curso, notas) {
+    let soma = 0;
+    for (let i = 0; i < notas.length; i++) {
+        soma += notas[i];
+    }
+    const media = soma / notas.length;
+
+    const aluno = {
+        nome: nome,
+        curso: curso,
+        notas: notas,
+        media: media.toFixed(2)
+    };
+
+    console.log("Aluno cadastrado:", aluno);
+}
+
+function calculadora(num1, num2, operacao) {
+    let resultado = 0;
+
+    const num1f = parseInt(num1)
+    const num2f = parseInt(num2)
+    
+    if (operacao === '+') {
+        resultado = num1f + num2f;
+    } else if (operacao === '-') {
+        resultado = num1f - num2f;
+    } else if (operacao === '*') {
+        resultado = num1f * num2f;
+    } else if (operacao === '/') {
+        resultado = num1f / num2f;
+    } else {
+        console.log("Operação inválida!");
+        return;
+    }
+
+    console.log(`Resultado da operação: ${resultado}`);
+}
